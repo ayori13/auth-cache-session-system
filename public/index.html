@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система аутентификации</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="auth-container">
+      <h1>Авторизация</h1>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="login">Вход</button>
+        <button class="tab-btn" data-tab="register">Регистрация</button>
+      </div>
+      
+      <div id="login-form" class="tab-content active">
+        <form id="login">
+          <div class="form-group">
+            <label for="login-username">Логин</label>
+            <input type="text" id="login-username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Пароль</label>
+            <input type="password" id="login-password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+      </div>
+      
+      <div id="register-form" class="tab-content">
+        <form id="register">
+          <div class="form-group">
+            <label for="register-username">Логин</label>
+            <input type="text" id="register-username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Пароль</label>
+            <input type="password" id="register-password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="register-confirm-password">Подтвердите пароль</label>
+            <input type="password" id="register-confirm-password" name="confirmPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+        </form>
+      </div>
+      
+      <div id="message" class="message"></div>
+    </div>
+    
+    <div id="profile-container" style="display: none;">
+      <h1>Личный кабинет</h1>
+      <p>Добро пожаловать, <span id="username"></span>!</p>
+      
+      <div class="theme-switch">
+        <span class="theme-icon sun-icon">☀️</span>
+        <label class="theme-switch-toggle">
+          <input type="checkbox" id="theme-toggle">
+          <span class="theme-switch-slider"></span>
+        </label>
+        <span class="theme-icon moon-icon">🌙</span>
+        <span class="theme-text" id="theme-text">Светлая тема</span>
+      </div>
+      
+      <div class="data-container">
+        <h2>Данные</h2>
+        <button id="refresh-data" class="btn">Обновить данные</button>
+        <div id="data-content"></div>
+      </div>
+      
+      <button id="logout" class="btn btn-danger">Выйти</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

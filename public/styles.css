@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f5f5;
+    --text-color: #333;
+    --bg-color: #fff;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+  }
+  
+  body.dark-theme {
+    --primary-color: #3498db;
+    --secondary-color: #34495e;
+    --text-color: #ecf0f1;
+    --bg-color: #2c3e50;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-danger {
+    background: var(--error-color);
+  }
+  
+  .message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .message.error {
+    background: var(--error-color);
+    color: white;
+  }
+  
+  .message.success {
+    background: var(--success-color);
+    color: white;
+  }
+  
+  .theme-switch {
+    margin: 20px 0;
+  }
+  
+  .data-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: var(--secondary-color);
+    border-radius: 4px;
+  }
+  
+  #data-content {
+    margin-top: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+.theme-switch {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-switch-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .theme-switch-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .theme-switch-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .theme-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .theme-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .theme-switch-slider {
+    background-color: var(--primary-color);
+  }
+  
+  input:checked + .theme-switch-slider:before {
+    transform: translateX(30px);
+  }
+  
+  .theme-icon {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  .theme-text {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .sun-icon {
+    color: #f39c12;
+  }
+  
+  .moon-icon {
+    color: #9b59b6;
+  }
+  
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
